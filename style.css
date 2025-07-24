@@ -1,0 +1,1148 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Roboto:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #181818;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+.container {
+    max-width: 1200px; /* Standard content width, adjust as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Horizontal padding for smaller screens */
+}
+
+/* --- Header Styles --- */
+.main-header {
+    background: none; /* The hero-section will handle the full background */
+    padding: 30px 0;
+    position: absolute; /* Position header absolutely over the hero section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensure header is on top */
+    color: white; /* Default text color for header */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-left p {
+    font-family:  sans-serif;
+    font-size: 15px;
+}
+
+.header-left svg {
+    fill: currentColor;
+}
+
+.header-right {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+.phone-btn {
+    width: 204px;
+    height: 36px;
+    border: 1px solid white;
+    color: white;
+    background: none;
+    font-size: 16px;
+}
+
+.social-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background: none;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* --- Hero Section Styles --- */
+.hero-section {
+    position: relative;
+    height: 945px; /* Reverted to 945px, as per original Figma dimensions */
+    display: flex; /* Keep flex for potential future content alignment */
+    align-items: center; /* Vertically center content */
+
+    /* The full background image including the milk/eggs/scale */
+    background: url('image/01 1.png') no-repeat center top / cover;
+
+    color: #181818;
+    padding-top: 100px; /* Space for the header */
+}
+
+.hero-content-container {
+    /* This container will help align the text block relative to the main content width */
+    position: relative; /* Essential for positioning hero-text-block */
+    width: 100%; /* Take full width of its parent (.hero-section) */
+    max-width: 1200px; /* Match your .container max-width */
+    margin: 0 auto; /* Center this container */
+    height: 100%; /* Take full height */
+}
+
+.hero-text-block {
+    position: absolute; /* Position absolutely within .hero-content-container */
+    top: 200px; /* Adjusted top position to make space for header and look good */
+    /*
+        To position it precisely on the left, aligned with the `container`'s content:
+        `left: 0;` will align it with the left edge of `hero-content-container`.
+        If you want a specific pixel offset *from that edge*, add padding to `hero-content-container` or
+        a small `left` value here.
+    */
+    left: 20px; /* This will be 20px from the left edge of the .container's content area */
+    width: 500px; /* Approx width from Figma */
+    /* Adjust these values to match your Figma's exact measurements */
+
+    color: #181818;
+}
+
+.hero-section h1 {
+    font-size: 55px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 34px;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 70px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.primary-btn,
+.secondary-btn {
+    border-radius: 50px; /* Matches your current code */
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    padding: 20px 40px;
+    border: none;
+}
+
+.primary-btn {
+    background: white;
+    color: #181818;
+    border: 1px solid white;
+}
+
+.primary-btn:hover {
+    background-color: #f0f0f0;
+    border-color: #f0f0f0;
+}
+
+.secondary-btn {
+    background: none;
+    border: 1px solid #181818;
+    color: #181818;
+}
+
+.secondary-btn:hover {
+    background-color: #181818;
+    color: white;
+}
+.what-is-style-section {
+    padding: 80px 0; /* Top and bottom padding */
+    background-color: white; /* As per screenshot */
+}
+
+.section-title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 38px; /* Based on p3 from previous sections */
+    color: #181818;
+    text-align: left; /* Aligned to left in screenshot */
+    margin-bottom: 40px; /* Space below title */
+    padding-left: 50px; /* Matches your previous sec2 padding */
+}
+
+.what-is-style-section .content-row {
+    display: flex;
+    gap: 50px; /* Space between image and text columns */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding: 0 50px; /* Consistent horizontal padding */
+}
+
+.what-is-style-section .image-column {
+    flex: 0 0 635px; /* Fixed width for the image as per your previous code */
+    max-width: 635px; /* Ensures it doesn't grow beyond this */
+    margin-right: 0; /* Resetting previous margin for flex context */
+}
+
+.what-is-style-section .image-column img {
+    max-width: 100%; /* Make image responsive within its column */
+    height: auto;
+    display: block;
+}
+
+.what-is-style-section .text-column {
+    flex: 1; /* Allows text column to take remaining space */
+    min-width: 300px; /* Ensures text column doesn't get too narrow before wrapping */
+}
+
+.what-is-style-section .text-column p {
+    font-size: 18px; /* Matches your previous p4 */
+    font-family: "Open Sans", sans-serif;
+    color: #181818;
+    margin-bottom: 20px; /* Space between paragraphs */
+}
+
+/* --- Elements Section (.elements-section) --- */
+.elements-section {
+    padding: 80px 0; /* Top and bottom padding */
+    background-color: white; /* As per screenshot */
+}
+
+.elements-section .section-title {
+    font-size: 55px; /* Matches your previous p5 */
+    text-align: center; /* Centered in the screenshot */
+    margin-bottom: 60px; /* Space below title */
+    padding-left: 0; /* Remove specific left padding, as it's centered */
+}
+
+.elements-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto new lines */
+    justify-content: center; /* Centers items horizontally when they wrap */
+    gap: 30px; /* Space between grid items */
+    padding: 0 50px; /* Consistent horizontal padding */
+}
+
+.element-item {
+    display: flex;
+    flex-direction: column; /* Stacks number above text */
+    align-items: center; /* Centers number and text horizontally within its item */
+    text-align: center; /* Ensures text is centered */
+    max-width: 200px; /* Limits the width of each item for better readability */
+}
+
+.element-number {
+    font-size: 18px; /* Matches your previous span style */
+    font-family: "Open Sans", sans-serif;
+    color: #181818;
+    margin-bottom: 10px; /* Space between number and description */
+}
+
+.element-description {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px; /* Matches your previous p6 */
+    color: #181818;
+}
+/* --- Global Styles & Resets (already exists, no changes needed here) --- */
+
+/* --- Cost Section (.cost-section) --- */
+.cost-section {
+    padding: 80px 0; /* Top and bottom padding */
+    background-color: white; /* As per screenshot */
+}
+
+.cost-section .section-title {
+    /* The section title is to the right of the text column on desktop */
+    font-family: "Open Sans", sans-serif;
+    font-size: 38px; /* Standard section title size */
+    color: #181818;
+    text-align: right; /* Aligned to right in screenshot on desktop */
+    margin-bottom: 40px; /* Space below title if it wraps */
+    padding-right: 50px; /* Aligns with content on right */
+    width: 100%; /* Take full width before flex applies */
+}
+
+.cost-content-row {
+    display: flex;
+    justify-content: space-between; /* Puts text and image columns on opposite sides */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    padding: 0 50px; /* Consistent horizontal padding */
+}
+
+.cost-text-column {
+    flex: 1; /* Allows text column to take available space */
+    min-width: 300px; /* Ensures text column doesn't get too narrow */
+     /* Adjusted to visually align with image from screenshot */
+    margin-right: 40px; /* Space between text and image columns */
+}
+
+.cost-paragraph {
+    font-size: 15px; /* Standard paragraph size */
+    font-family: "Open Sans", sans-serif;
+    color: #181818;
+    margin-bottom: 20px; /* Space between paragraphs */
+    padding-left: 10px; /* Matches the slight indent from your old p7 */
+}
+
+.highlight-box {
+    background: #2B59C3;
+    max-width: 416px; /* Max width as per your old p8 */
+    height: auto; /* Allow height to adjust based on content */
+    min-height: 50px; /* Ensure minimum height */
+    border-radius: 5px;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    padding: 10px 10px; /* Padding for text inside the box */
+    display: flex; /* Use flex to vertically align content if needed */
+    align-items: center;
+    line-height: 1.4; /* Improve readability inside box */
+    margin-top: 1px; /* Space above this box */
+    margin-left: 10px; /* Matches indent */
+}
+
+.cost-image-column {
+    flex: 0 0 600px; /* Fixed width for the image column, adjust as needed */
+    max-width: 600px; /* Max width to ensure it doesn't grow too large */
+    /* padding-top: 10px; This was for the image, handled by align-items: flex-start on row */
+    text-align: right; /* Align image to the right within its column */
+}
+
+.cost-image-column img {
+    max-width: 100%; /* Make image responsive within its column */
+    height: auto;
+    display: block; /* Remove extra space below image */
+    margin-left: auto; /* Pushes image to the right within its column */
+}
+/* --- Project Showcase Section (.project-showcase-section) --- */
+.project-showcase-section {
+    padding: 100px 0; /* Top and bottom padding for the section */
+    background-color: white; /* Or match background from Figma */
+}
+
+.project-block {
+    margin-bottom: 50px; /* Space between individual project blocks */
+    /* Center the project block horizontally, as it's not full-width */
+    max-width: 1200px; /* Limit width to align with content */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-image-top img {
+    max-width: 100%; /* Make image responsive within its container */
+    height: auto;
+    display: block; /* Remove extra space below image */
+    margin-bottom: 30px; /* Space between image and info block */
+    border-radius: 5px; /* Optional: add subtle border-radius if in Figma */
+}
+
+.project-info-bottom {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 40px; /* Space between title/description and button */
+    padding: 0 50px; /* Indent the info block similar to other sections */
+}
+
+.project-title-main {
+    font-family: "Open Sans", sans-serif;
+    color: #181818;
+    line-height: 1.2;
+    /* This span makes the first line bigger/bolder */
+    display: flex; /* Using flex to align span and paragraph below it */
+    align-items: baseline; /* Align elements to the baseline */
+    flex-wrap: wrap;
+    gap: 10px; /* Space between title and description if on same line */
+}
+
+.project-title-main span {
+    font-size: 55px; /* Large font size for the main title */
+    font-weight: bold; /* Make it bold as per design */
+    white-space: nowrap; /* Prevent "Amperia" from wrapping */
+}
+
+.project-description {
+    font-size: 18px; /* Standard paragraph size */
+    font-family: "Open Sans", sans-serif;
+    color: #181818;
+    flex: 1; /* Allow description to take up available space */
+    min-width: 200px; /* Minimum width before wrapping */
+}
+
+.project-button {
+    border-radius: 40px;
+    width: 231px; /* Specific width as per your previous button styles */
+    height: 71px; /* Specific height */
+    background: white;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    color: #181818;
+    border: 1px solid #ccc; /* Add a subtle border */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    flex-shrink: 0; /* Prevent button from shrinking */
+    margin-left: auto; /* Push button to the right */
+}
+
+.project-button:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+}
+
+.show-more-button {
+    background: #2B59C3;
+    Width: 250px; /* Specific width from your previous screenshot */
+    Height: 75px; /* Specific height */
+    border-radius: 40px;
+    color: white;
+    font-size: 26px;
+    font-family: "Open Sans", sans-serif;
+    display: block; /* Make it a block element to center with margin auto */
+    margin: 80px auto 0 auto; /* Center the button below projects and add top margin */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.show-more-button:hover {
+    background-color: #204099;
+}
+
+
+/* --- Guidelines Section (.guidelines-section) --- */
+.guidelines-section {
+    padding: 80px 0; /* Top and bottom padding */
+    background-color: white; /* As per screenshot */
+}
+
+.guidelines-content-row {
+    display: flex;
+    gap: 50px; /* Space between image and text columns */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    padding: 0 50px; /* Consistent horizontal padding */
+}
+
+.guidelines-image-column {
+    flex: 0 0 635px; /* Fixed width for the image as per your previous code */
+    max-width: 635px; /* Ensures it doesn't grow beyond this */
+    margin-right: 0;
+}
+
+.guidelines-image-column img {
+    max-width: 100%; /* Make image responsive within its column */
+    height: auto;
+    display: block;
+    border-radius: 5px; /* Optional: add some border-radius to images */
+}
+
+.guidelines-text-column {
+    flex: 1; /* Allows text column to take remaining space */
+    min-width: 300px; /* Ensures text column doesn't get too narrow before wrapping */
+}
+
+.guidelines-text-column .guidelines-main-text {
+    background: #2B59C3;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    margin-bottom: 30px; /* Space below this block */
+    padding: 20px; /* Padding inside the blue box */
+}
+
+.guidelines-text-column .guidelines-main-text span {
+    background: none; /* Reset background for span if inherited */
+    font-size: 26px;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    display: block; /* Makes the title part take its own line */
+    margin-bottom: 15px; /* Space between title and first paragraph */
+}
+
+.guidelines-text-column p {
+    font-size: 18px; /* Standard paragraph size */
+    font-family: "Open Sans", sans-serif;
+    color: #181818;
+    margin-bottom: 20px; /* Space between paragraphs */
+}
+.consent-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the checkbox and text */
+    gap: 10px;
+    margin-top: 20px;
+    max-width: 500px; /* Limit width for centering */
+    margin-left: auto; /* Center the checkbox block */
+    margin-right: auto; /* Center the checkbox block */
+}
+
+.consent-checkbox input[type="checkbox"] {
+    width: 20px; /* Adjust checkbox size */
+    height: 20px;
+    cursor: pointer;
+}
+
+.consent-checkbox p {
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    color: #181818;
+    margin: 0; /* Reset margin from other p styles */
+}
+
+
+
+/* --- Contact Form Section (.contact-section) --- */
+.contact-section {
+    padding: 80px 0; /* Top and bottom padding */
+    background-color: white; /* As per screenshot */
+    text-align: center; /* Center the entire section content */
+}
+
+.contact-section .section-title {
+    font-size: 38px; /* Standard section title size */
+    color: #181818;
+    margin-bottom: 20px;
+    padding-left: 0; /* Center title */
+    text-align: center;
+}
+
+.contact-description {
+    font-family: "Open Sans", sans-serif;
+    font-size: 26px;
+    color: #181818;
+    margin-bottom: 40px;
+}
+
+.form-inputs-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow inputs/button to wrap */
+    justify-content: center; /* Center form elements */
+    gap: 20px; /* Space between form elements */
+    margin-bottom: 20px;
+}
+
+.form-inputs-buttons input {
+    max-width: 350px; /* Max width for responsiveness */
+    width: 100%; /* Fill available width up to max-width */
+    height: 71px;
+    border-radius: 10px;
+    border: 1px solid #ccc; /* Add a border for inputs */
+    color: #868686;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    padding: 0 20px; /* Padding inside inputs */
+}
+
+.form-inputs-buttons button {
+    border-radius: 40px;
+    width: 228px;
+    height: 71px;
+    background: #2B59C3;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-inputs-buttons button:hover {
+    background-color: #204099;
+}
+
+/* --- Combined Info and Contact Section (.info-and-contact-section) --- */
+.info-and-contact-section {
+    /* Combined padding from previous guidelines-section and contact-section */
+    padding-top: 80px;
+    padding-bottom: 80px; /* You might adjust this if the bottom padding needs to be different */
+    background-color: white; /* Consistent background */
+}
+
+/* Guidelines content within the combined section */
+.info-and-contact-section .guidelines-section-title { /* Specific title style for Guidelines within combined section */
+    font-size: 38px; /* Should be 38px as per screenshot */
+    text-align: left; /* Aligned to left */
+    padding-left: 50px; /* Consistent left padding */
+    margin-bottom: 40px; /* Space below title */
+}
+
+.info-and-contact-section .guidelines-content-row {
+    display: flex;
+    gap: 50px; /* Space between image and text columns */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    padding: 0 50px; /* Consistent horizontal padding for the row */
+    margin-bottom: 80px; /* Space between guidelines content and contact form title */
+}
+
+.info-and-contact-section .guidelines-image-column {
+    flex: 0 0 635px; /* Fixed width for the image */
+    max-width: 635px;
+}
+
+.info-and-contact-section .guidelines-image-column img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.info-and-contact-section .guidelines-text-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-and-contact-section .guidelines-text-column .guidelines-main-text {
+    background: #2B59C3;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.info-and-contact-section .guidelines-text-column .guidelines-main-text span {
+    background: none;
+    font-size: 26px;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.info-and-contact-section .guidelines-text-column p {
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    color: #181818;
+    margin-bottom: 20px;
+}
+
+/* Contact Form content within the combined section */
+.info-and-contact-section .contact-section-title { /* Specific title style for Contact within combined section */
+    font-size: 38px;
+    text-align: center; /* Centered as per screenshot */
+    padding-left: 0; /* Resetting padding for centering */
+    margin-bottom: 20px;
+}
+
+.info-and-contact-section .contact-description {
+    font-family: "Open Sans", sans-serif;
+    font-size: 26px;
+    color: #181818;
+    margin-bottom: 40px;
+    text-align: center; /* Ensure description is centered */
+}
+
+.info-and-contact-section .form-inputs-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    /* Padding is inherited from .container, so no need here unless specific */
+}
+
+.info-and-contact-section .form-inputs-buttons input {
+    max-width: 350px;
+    width: 100%;
+    height: 71px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    color: #868686;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    padding: 0 20px;
+}
+
+.info-and-contact-section .form-inputs-buttons button {
+    border-radius: 40px;
+    width: 228px;
+    height: 71px;
+    background: #2B59C3;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-and-contact-section .form-inputs-buttons button:hover {
+    background-color: #204099;
+}
+
+.info-and-contact-section .consent-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-and-contact-section .consent-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.info-and-contact-section .consent-checkbox label { /* Added label styling */
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    color: #181818;
+    cursor: pointer;
+}
+.corporate-identity-container {
+    max-width: 1200px;
+    margin: 4rem auto; /* Отступы сверху/снизу и центрирование */
+    padding: 2rem;
+}
+
+/* Главный заголовок */
+.corporate-identity-container h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 5rem;
+    line-height: 1.3;
+    width: 60%; /* Ограничиваем ширину для переноса как на макете */
+}
+
+/* Сетка для всех этапов */
+.stages-grid {
+    display: grid;
+    gap: 4rem; /* Расстояние между строками-этапами */
+}
+
+/* Отдельный этап (строка) */
+.stage {
+    display: grid;
+    /* 1 часть для иконки/заголовка, 3 части для деталей */
+    grid-template-columns: 1fr 3fr;
+    gap: 2.5rem; /* Расстояние между левой и правой колонками */
+    align-items: start; /* Выравнивание по верху */
+}
+
+/* Левая часть этапа (иконка и заголовок H2) */
+.stage-intro {
+    text-align: left;
+}
+
+.stage-intro .icon {
+    color: #007bff; /* Синий цвет для иконок */
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+}
+
+.stage-intro h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Правая часть этапа (три блока с описанием) */
+.stage-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три колонки одинаковой ширины */
+    gap: 2.5rem; /* Расстояние между колонками с описанием */
+}
+
+/* Блок с подзаголовком (H3) и параграфом */
+.detail-block h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.detail-block p {
+    font-size: 1rem;
+    color: #555; /* Слегка приглушенный цвет текста */
+    line-height: 1.6;
+    margin: 0;
+}
+/* Переменные для удобного управления цветами и стилями */
+:root {
+    --brand-blue: #3a57c4;
+    --border-light: #e0e0e0;
+    --text-dark: #212121;
+    --text-light: #666;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.comparison-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.comparison-col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0; /* Равномерно распределяет ширину */
+}
+
+/* --- Стили для колонок --- */
+
+/* Первая колонка (Заголовки строк) */
+.col-row-headers {
+    flex-grow: 0.7; /* Делаем ее немного уже остальных */
+    background-color: var(--brand-blue);
+    color: white;
+}
+.col-row-headers .header-cell {
+    visibility: hidden; /* Скрываем ячейку над заголовками строк */
+}
+
+/* Колонки с контентом */
+.col-content {
+    flex-grow: 1; /* Все остальные колонки равной ширины */
+    border-right: 1px solid var(--border-light);
+}
+.comparison-container .col-content:last-child {
+    border-right: none;
+}
+
+/* --- Стили для ячеек --- */
+
+.cell {
+    padding: 24px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--border-light);
+}
+.comparison-col > .cell:last-child {
+    border-bottom: none;
+}
+.col-row-headers .cell {
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    font-weight: 600;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Заголовки колонок */
+.header-cell {
+    min-height: 80px;
+    justify-content: center;
+    text-align: center;
+}
+.header-cell h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--text-dark);
+}
+.header-cell .logo {
+    font-weight: 800;
+    font-size: 1.75rem;
+    letter-spacing: -1px;
+}
+
+/* Контентные ячейки */
+.content-cell p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+/* Выделенная колонка */
+.col-highlighted {
+    position: relative;
+    border-radius: 16px;
+    border: 3px solid var(--brand-blue);
+    /* Компенсируем сдвиг из-за рамки */
+    margin: -3px;
+}
+.col-highlighted .cell {
+    border-color: var(--border-light);
+}
+
+
+.quality-guarantee-section {
+    /* Переменные для удобства */
+    --neon-green: #39ff14;
+    --text-white: #ffffff;
+
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    /* Фон */
+    background-color: #1a1a1a;
+    background-image: url('image/Rectangle 32.png');
+    background-size: cover;
+    background-position: center;
+
+    color: var(--text-white);
+    padding: 6rem 4rem;
+    overflow: hidden; /* Важно для обрезки того, что выходит за рамки */
+}
+
+/* Затемняющий слой для читаемости текста */
+.quality-guarantee-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1; /* Слой затемнения под контентом */
+}
+
+/* Контейнер для контента */
+.guarantee-content {
+    position: relative;
+    z-index: 2; /* Контент над слоем затемнения */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.guarantee-content h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 4rem;
+    max-width: 50%; /* Ограничиваем ширину для переноса строки */
+}
+
+/* Сетка преимуществ */
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 колонок */
+    gap: 2.5rem;
+}
+
+.advantage-item .number {
+    font-size: 5rem;
+    font-weight: 200; /* Тонкое начертание */
+    line-height: 1;
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.advantage-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.advantage-item p strong {
+    font-weight: 600; /* Полужирное начертание для выделенных слов */
+}
+
+/* Стили для иконок */
+.doodle-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 2;
+    pointer-events: none; /* Иконки не будут мешать выделению текста */
+}
+
+.doodle {
+    position: absolute;
+    stroke: var(--neon-green);
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Позиционирование каждой иконки */
+#doodle-lava { bottom: 20px; left: 22%; width: 60px; }
+#doodle-eye { bottom: 80px; left: 35%; width: 80px; }
+#doodle-lips { bottom: 100px; left: 45%; width: 100px; }
+#doodle-bench { bottom: 20px; left: 40%; width: 220px; }
+
+
+/* Секция футера */
+.footer-section {
+    padding: 5rem 2rem;
+    background-color: #ffffff;
+}
+
+.footer-container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Верхняя часть: Форма и Контакты */
+.footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin-bottom: 5rem;
+}
+
+.footer-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    color: var(--text-dark);
+}
+
+.footer-heading a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid ;
+    padding-bottom: 4px;
+}
+.contact-info-wrapper .footer-heading a {
+    border-bottom: none;
+}
+
+
+/* Стили для формы */
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.contact-form .form-control::placeholder {
+    color: var(--text-light);
+}
+
+.contact-form .form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 1.5rem;
+}
+
+.form-check a {
+    text-decoration: underline;
+}
+
+
+
+.contact-form .btn-submit {
+    background-color: var(--brand-blue);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: background-color 0.2s;
+}
+.contact-form .btn-submit:hover {
+    background-color: #2e46a1;
+}
+
+/* Стили для контактов */
+.contact-info p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin: 0 0 1rem 0;
+    color: var(--text-dark);
+}
+
+/* Нижняя часть: СМИ */
+.media-section {
+    margin-bottom: 4rem;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.media-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--brand-blue);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    min-height: 150px;
+    transition: transform 0.2s ease-out;
+}
+.media-card:hover {
+    transform: translateY(-5px);
+}
+
+.media-card h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.media-card span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Копирайт */
+.footer-copyright {
+    text-align: left;
+    color: var(--text-light);
+    margin-top: 4rem;
+}
+
